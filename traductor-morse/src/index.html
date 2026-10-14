@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fbf7ff">
+    <meta name="description" content="Traduce texto a código Morse y código Morse a texto de forma sencilla.">
+    <title>Traductor Morse</title>
+</head>
+<body>
+    <main class="page">
+        <section class="translator" aria-labelledby="pageTitle">
+            <header class="page-header">
+                <span class="eyebrow">HERRAMIENTA DE TRADUCCIÓN</span>
+                <h1 id="pageTitle">Traductor Morse</h1>
+                <p class="subtitle">C:</p>
+            </header>
+
+            <div class="mode-selector">
+                <span class="mode-label">Modo de conversión</span>
+                <button id="btnToggle" class="btn-toggle" type="button" aria-pressed="false">
+                    Texto <span aria-hidden="true">→</span> Morse
+                </button>
+            </div>
+
+            <form id="translatorForm" novalidate>
+                <div class="input-group">
+                    <label id="lblInput" for="inputText">Tu texto</label>
+                    <textarea id="inputText" name="inputText" rows="4" placeholder="Escribe aquí tu mensaje..." aria-describedby="inputHint errorMsg"></textarea>
+                    <p id="inputHint" class="hint">Se admiten letras, números y signos de puntuación.</p>
+                </div>
+
+                <p id="errorMsg" class="error" role="alert" aria-live="polite"></p>
+                <button id="btnTranslate" class="btn-action" type="submit">
+                    Traducir <span aria-hidden="true">→</span>
+                </button>
+
+                <div class="input-group">
+                    <label for="outputText">Resultado</label>
+                    <textarea id="outputText" name="outputText" rows="4" readonly placeholder="Tu traducción aparecerá aquí." aria-live="polite"></textarea>
+                    <p class="hint">En Morse, las letras se separan con espacios y las palabras con <code>/</code>.</p>
+                </div>
+            </form>
+
+            <footer class="page-footer">
+                <span class="signal" aria-hidden="true"></span>
+                Compatible con alfabeto, números y puntuación internacional
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

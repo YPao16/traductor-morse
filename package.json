@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "npm --prefix traductor-morse run build",
+    "dev": "npm --prefix traductor-morse run dev"
+  },
+  "devDependencies": {
+    "webpack-cli": "^7.2.3"
+  }
+}
